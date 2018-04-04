@@ -15,24 +15,15 @@ namespace FinancialPortal.Models
         }
 
         public int Id { get; set; }
-
         public int HouseholdId { get; set; }
-
         public string Name { get; set; }
-
         public decimal Balance { get; set; }
-
         public decimal ReconciledBalance { get; set; }
-
         [StringLength(128)]
         public string CreatedById { get; set; }
-
         public bool IsDeleted { get; set; }
-
-        public virtual AspNetUser AspNetUser { get; set; }
-
+        public virtual ApplicationUser User { get; set; }
         public virtual Household Household { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Transaction> Transactions { get; set; }
     }

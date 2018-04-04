@@ -9,22 +9,14 @@ namespace FinancialPortal.Models
     public partial class Invite
     {
         public int Id { get; set; }
-
         public int HouseholdId { get; set; }
-
         public string Email { get; set; }
-
         public Guid HHToken { get; set; }
-
         public DateTimeOffset InviteDate { get; set; }
-
         [StringLength(128)]
         public string InvitedById { get; set; }
-
         public bool HasBeenUsed { get; set; }
-
-        public virtual AspNetUser AspNetUser { get; set; }
-
+        public virtual ApplicationUser Users { get; set; }  //change to ApplicationUser
         public virtual Household Household { get; set; }
     }
 }
