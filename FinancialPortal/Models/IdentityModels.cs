@@ -13,28 +13,16 @@ namespace FinancialPortal.Models
     public class ApplicationUser : IdentityUser
     {
 
-        public string Id { get; set; }
+        //public string Id { get; set; }
         //public string FirstName { get; set; }
         //public string LastName { get; set; }
         //public string DisplayName { get; set; }
         public int? HouseHoldId { get; set; }
-        //[StringLength(256)]
-        //public string Email{ get; set; }
-        //public bool EmailConfirmed { get; set; }
-        //public string PasswordHash { get; set; }
-        //public string SecurityStamp { get; set; }
-        //public string PhoneNumber { get; set; }
-        //public bool PhoneNumberConfirmed { get; set; }
-        //public bool TwoFactorEnabled { get; set; }
-        //public DateTime? LockoutEndDateUtc { get; set; } //change to DateTimeOffset??????
-        //public bool LockoutEnabled { get; set; }
-        //public int AccessFailedCount { get; set; }
-        //[Required]
-        //[StringLength(256)]
-        //public string UserName { get; set; }
+     
         public string FullName { get; set; }
         public string InviteEmail { get; set; }
 
+        public virtual Household Household { get; set; }
         public virtual ICollection<Invite> Invites { get; set; }
         public virtual ICollection<PersonalAccount> PersonalAccounts { get; set; }
         public virtual ICollection<Transaction> Transactions { get; set; }
@@ -55,6 +43,7 @@ namespace FinancialPortal.Models
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
+            userIdentity.AddClaim(new Claim("Name", FullName));
             return userIdentity;
         }
     }
@@ -71,14 +60,14 @@ namespace FinancialPortal.Models
             return new ApplicationDbContext();
         }
 
-        public DbSet<Invite> invites { get; set; }
-        public DbSet<PersonalAccount> personalAccounts { get; set; }
-        public DbSet<Transaction> transactions { get; set; }
-        public DbSet<Budget> budgets { get; set; }
-        public DbSet<BudgetItem> budgetItems { get; set; }
-        public DbSet<Category> categories { get; set; }
-        public DbSet<Household> households{ get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public DbSet<Invite> Invites { get; set; }
+        public DbSet<PersonalAccount> PersonalAccounts { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Budget> Budgets { get; set; }
+        public DbSet<BudgetItem> BudgetItems { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Household> Households{ get; set; }
+        public virtual DbSet<Sysdiagram> Sysdiagrams { get; set; }
 
     }
 }

@@ -6,7 +6,7 @@ namespace FinancialPortal.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class sysdiagram
+    public class Sysdiagram
     {
         [Required]
         [StringLength(128)]

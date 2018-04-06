@@ -213,6 +213,14 @@ namespace FinancialPortal.Controllers
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
+
+
+        public ActionResult ChangeFullName()
+        {
+            return View();
+        }
+
+
         //
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()

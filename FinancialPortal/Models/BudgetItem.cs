@@ -6,7 +6,7 @@ namespace FinancialPortal.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class BudgetItem
+    public class BudgetItem
     {
         public int Id { get; set; }
 

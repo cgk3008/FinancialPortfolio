@@ -64,6 +64,11 @@ namespace FinancialPortal.Models
 
     public class RegisterViewModel
     {
+
+        [Required]
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

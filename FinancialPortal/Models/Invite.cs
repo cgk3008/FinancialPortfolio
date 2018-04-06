@@ -6,7 +6,7 @@ namespace FinancialPortal.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Invite
+    public class Invite
     {
         public int Id { get; set; }
         public int HouseholdId { get; set; }
@@ -15,7 +15,7 @@ namespace FinancialPortal.Models
         public DateTimeOffset InviteDate { get; set; }
         [StringLength(128)]
         public string InvitedById { get; set; }
-        public bool HasBeenUsed { get; set; }
+        public bool HasBeenUsed { get; set; } //invite has been used because person is in household now
         public virtual ApplicationUser Users { get; set; }  //change to ApplicationUser
         public virtual Household Household { get; set; }
     }
