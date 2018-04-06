@@ -17,6 +17,8 @@ namespace FinancialPortal.Controllers
         // GET: Households
         public ActionResult Index()
         {
+
+
             return View(db.Households.ToList());
         }
 

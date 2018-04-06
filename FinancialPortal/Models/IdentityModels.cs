@@ -18,6 +18,7 @@ namespace FinancialPortal.Models
         //public string LastName { get; set; }
         //public string DisplayName { get; set; }
         public int? HouseHoldId { get; set; }
+       
      
         public string FullName { get; set; }
         public string InviteEmail { get; set; }

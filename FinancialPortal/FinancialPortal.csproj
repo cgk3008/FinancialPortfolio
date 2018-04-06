@@ -196,7 +196,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BudgetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HouseholdRolesViewsController.cs" />
     <Compile Include="Controllers\HouseholdsController.cs" />
+    <Compile Include="Controllers\InvitesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PersonalAccountsController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
@@ -216,6 +218,7 @@
     <Compile Include="Models\Helper\Extensions.cs" />
     <Compile Include="Models\Helper\UserHelper.cs" />
     <Compile Include="Models\Household.cs" />
+    <Compile Include="Models\HouseholdRolesView.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invite.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -4619,6 +4622,13 @@
     <Content Include="Views\Transactions\Details.cshtml" />
     <Content Include="Views\Transactions\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
+    <Content Include="Views\HouseholdRolesViews\Index.cshtml" />
+    <Content Include="Views\Invites\Create.cshtml" />
+    <Content Include="Views\Invites\Delete.cshtml" />
+    <Content Include="Views\Invites\Details.cshtml" />
+    <Content Include="Views\Invites\Edit.cshtml" />
+    <Content Include="Views\Invites\Index.cshtml" />
+    <Content Include="Views\HouseholdRolesViews\EditUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

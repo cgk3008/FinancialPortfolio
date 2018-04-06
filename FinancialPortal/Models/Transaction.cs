@@ -13,7 +13,7 @@ namespace FinancialPortal.Models
         public string Description { get; set; }
         public DateTimeOffset Date { get; set; }
         public decimal Amount { get; set; }
-        public bool Type { get; set; }
+        public bool Type { get; set; }  //If false it is an expense, if true it is a credit/income. Change bool to string and show expense or income on a select list, then add or subtract to personal account and household based on type.
         public int CategoryId { get; set; }
         [StringLength(128)]
         public string EnteredById { get; set; }

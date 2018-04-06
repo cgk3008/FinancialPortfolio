@@ -1,0 +1,31 @@
+﻿@model FinancialPortal.Models.HouseholdRolesView
+
+@{
+	ViewBag.Title = "EditUser";
+}
+
+<h2>EditUser</h2>
+
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+
+	@Html.HiddenFor(m => m.User.Id)
+
+
+
+	@Html.DropDownList("SelectedRoles", Model.Roles, new { @class = "control-label col-md-2" })
+
+
+	<br />
+
+	<p><input type="submit" class="btn btn-info" /></p>
+
+}
+<br />
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
+
