@@ -260,6 +260,7 @@
     <Content Include="Assets\production\icons.html" />
     <Content Include="Assets\production\images\american-express.png" />
     <Content Include="Assets\production\images\cropper.jpg" />
+    <Content Include="Assets\production\images\Houseicon0_1_60.png" />
     <Content Include="Assets\production\images\favicon.ico" />
     <Content Include="Assets\production\images\img.jpg" />
     <Content Include="Assets\production\images\inbox.png" />
