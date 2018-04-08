@@ -117,6 +117,41 @@ namespace FinancialPortal.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Households/Merge/5
+        public ActionResult Merge(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Household household = db.Households.Find(id);
+            if (household == null)
+            {
+                return HttpNotFound();
+            }
+            return View(household);
+        }
+
+        // POST: Households/Merge/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Merge([Bind(Include = "Id,Name")] Household household)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(household).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(household);
+        }
+
+
+
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

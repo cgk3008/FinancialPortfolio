@@ -21,6 +21,8 @@ namespace FinancialPortal.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string HeadHousehold { get; set; }
+        public int MergePrimaryId { get; set; }
+        public int MergeSecondaryId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ApplicationUser> Users { get; set; }

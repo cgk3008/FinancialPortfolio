@@ -273,6 +273,7 @@
     <Content Include="Assets\production\images\prod-3.jpg" />
     <Content Include="Assets\production\images\prod-4.jpg" />
     <Content Include="Assets\production\images\prod-5.jpg" />
+    <Content Include="Assets\production\images\sharpen-house-dollar.png" />
     <Content Include="Assets\production\images\user.png" />
     <Content Include="Assets\production\images\visa.png" />
     <Content Include="Assets\production\inbox.html" />
@@ -4630,6 +4631,7 @@
     <Content Include="Views\Invites\Edit.cshtml" />
     <Content Include="Views\Invites\Index.cshtml" />
     <Content Include="Views\HouseholdRolesViews\EditUser.cshtml" />
+    <Content Include="Views\Households\Merge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

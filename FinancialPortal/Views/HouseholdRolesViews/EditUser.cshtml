@@ -4,28 +4,61 @@
 	ViewBag.Title = "EditUser";
 }
 
-<h2>EditUser</h2>
+
+<html>
+<body>
 
 
-@using (Html.BeginForm())
-{
-	@Html.AntiForgeryToken()
+	<div class="right_col" role="main">
+		<div class="">
+
+			@*<div class="clearfix"></div>*@
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+						<div class="x_title">
+							<h1>Edit User <small></small></h1>
+							<div class="x_content">
+
+							</div>
+							@*<div class="clearfix"></div>*@
+						</div>
+						<div class="x_content">
+							<p class="text-muted font-13 m-b-30">
+
+							</p>
+
+							@using (Html.BeginForm())
+							{
+								@Html.AntiForgeryToken()
 
 
-	@Html.HiddenFor(m => m.User.Id)
+								@Html.HiddenFor(m => m.User.Id)
 
 
 
-	@Html.DropDownList("SelectedRoles", Model.Roles, new { @class = "control-label col-md-2" })
+								@Html.DropDownList("SelectedRoles", Model.Roles, new { @class = "control-label col-md-2" })
 
 
-	<br />
+								<br />
 
-	<p><input type="submit" class="btn btn-info" /></p>
+								<p><input type="submit" class="btn btn-info" /></p>
 
-}
-<br />
-@section Scripts {
-	@Scripts.Render("~/bundles/jqueryval")
-}
+							}
+							<br />
 
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	@section Scripts {
+		@Scripts.Render("~/bundles/jqueryval")
+	}
+</body>
+</html>

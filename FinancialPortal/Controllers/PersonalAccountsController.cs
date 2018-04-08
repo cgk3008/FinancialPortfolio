@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FinancialPortal.Models;
+using Microsoft.AspNet.Identity;
 
 namespace FinancialPortal.Controllers
 {
@@ -52,6 +53,10 @@ namespace FinancialPortal.Controllers
         {
             if (ModelState.IsValid)
             {
+                //ApplicationUser user = db.Users.Find(personalAccount);
+                personalAccount.CreatedById = User.Identity.GetUserId();
+                personalAccount.IsDeleted = false;
+
                 db.PersonalAccounts.Add(personalAccount);
                 db.SaveChanges();
                 return RedirectToAction("Index");

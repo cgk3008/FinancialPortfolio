@@ -1,66 +1,101 @@
 ﻿@model FinancialPortal.Models.PersonalAccount
 
 @{
-    ViewBag.Title = "Details";
+	ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<html>
+<body>
 
-<div>
-    <h4>PersonalAccount</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Household.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Household.Name)
-        </dd>
+	<div class="right_col" role="main">
+		<div class="">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+			@*<div class="clearfix"></div>*@
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+						<div class="x_title">
+							<h1>Bank Account Details <small></small></h1>
+							<div class="x_content">
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+							</div>
+							@*<div class="clearfix"></div>*@
+						</div>
+						<div class="x_content">
+							<p class="text-muted font-13 m-b-30">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Balance)
-        </dt>
+							</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Balance)
-        </dd>
+							<div>
+								<h4>PersonalAccount</h4>
+								<hr />
+								<dl class="dl-horizontal">
+									<dt>
+										@Html.DisplayNameFor(model => model.Household.Name)
+									</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReconciledBalance)
-        </dt>
+									<dd>
+										@Html.DisplayFor(model => model.Household.Name)
+									</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReconciledBalance)
-        </dd>
+									<dt>
+										@Html.DisplayNameFor(model => model.Name)
+									</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedById)
-        </dt>
+									<dd>
+										@Html.DisplayFor(model => model.Name)
+									</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CreatedById)
-        </dd>
+									<dt>
+										@Html.DisplayNameFor(model => model.Balance)
+									</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IsDeleted)
-        </dt>
+									<dd>
+										@Html.DisplayFor(model => model.Balance)
+									</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IsDeleted)
-        </dd>
+									<dt>
+										@Html.DisplayNameFor(model => model.ReconciledBalance)
+									</dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+									<dd>
+										@Html.DisplayFor(model => model.ReconciledBalance)
+									</dd>
+
+									<dt>
+										@Html.DisplayNameFor(model => model.CreatedById)
+									</dt>
+
+									<dd>
+										@Html.DisplayFor(model => model.CreatedById)
+									</dd>
+
+									<dt>
+										@Html.DisplayNameFor(model => model.IsDeleted)
+									</dt>
+
+									<dd>
+										@Html.DisplayFor(model => model.IsDeleted)
+									</dd>
+
+								</dl>
+							</div>
+							<p>
+								@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+								@Html.ActionLink("Back to List", "Index")
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	@section Scripts {
+		@Scripts.Render("~/bundles/jqueryval")
+	}
+</body>
+</html>
