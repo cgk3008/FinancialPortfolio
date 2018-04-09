@@ -60,6 +60,8 @@ namespace FinancialPortal.Controllers
             return View(household);
         }
 
+
+
         // GET: Households/Edit/5
         public ActionResult Edit(int? id)
         {

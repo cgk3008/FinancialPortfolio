@@ -194,6 +194,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminHouseholdsController.cs" />
     <Compile Include="Controllers\BudgetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HouseholdRolesViewsController.cs" />
@@ -211,11 +212,13 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminHousehold.cs" />
     <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\BudgetItem.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DashViewModel.cs" />
     <Compile Include="Models\Helper\Extensions.cs" />
+    <Compile Include="Models\Helper\HouseholdHelper.cs" />
     <Compile Include="Models\Helper\UserHelper.cs" />
     <Compile Include="Models\Household.cs" />
     <Compile Include="Models\HouseholdRolesView.cs" />
@@ -4575,6 +4578,8 @@
     <Content Include="Views\Budgets\Details.cshtml" />
     <Content Include="Views\Budgets\Edit.cshtml" />
     <Content Include="Views\Budgets\Index.cshtml" />
+    <Content Include="Views\AdminHouseholds\AddToHouse.cshtml" />
+    <Content Include="Views\AdminHouseholds\RemoveFromHouse.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
